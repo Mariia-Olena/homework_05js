@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function padString(userString, lineLength, userSymbol, toStart = false) {  
+            if (userString.length < lineLength) {
+                let symbolString = '';
+                for (symbol = 0; symbol < lineLength - userString.length; symbol++) {
+                    symbolString += userSymbol;
+                }
+                if (toStart == true) {
+                    result = symbolString + userString;
+                } else {
+                    result = userString + symbolString;
+                }
+                return result;
+            } else {
+                return userString;
+            }
+        }
+        const functionResult = padString('Pavlo', 10, '*', true);
+        console.log(functionResult);
+    </script>
+</body>
+</html>
